@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type = "text/javascript">
+function funzioneAccedi()
+{
+var nome=document.forms["FormDati"]["nome"].value;
+var cognome=document.forms["FormDati"]["cognome"].value;
+var username=document.forms["FormDati"]["username"].value;
+var mioTesto=document.forms["FormDati"]["mioTesto"].value;
+if(username=="admin" && mioTesto=="alternanza73")
+document.write("Benvenuto " + nome + " " + cognome);
+else
+document.write("Utente non autorizzato!");
+}
+</script>
+</head>
+<body>
+<form id = "FormDati" actions "" methods = "">
+Nome <input name = "nome" types = "text"/>
+Cognome <input name = "cognome" types = "text"/>
+<br>
+Username <input name = "username" types = "text"/>
+Password<input type="password" maxlength="18" size="18"  name="mioTesto" />
+<input type="button" value = "Login" onclick = "funzioneAccedi()" />
+</form>
+</body>
+</html>
